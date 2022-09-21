@@ -1,0 +1,11 @@
+{
+    "reporterEnabled": "mochawesome,mocha-junit-reporter",
+    "mochawesomeReporterOptions": {
+        "html": true,
+        "json": false
+    },
+    "mochaJunitReporterReporterOptions": {
+        "mochaFile": "./junitxray.xml",
+        "testsuitesTitle": "axios-api-automation-template"
+    }
+}

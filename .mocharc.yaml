@@ -1,0 +1,9 @@
+# recursive: true
+# spec: "./src/tests"
+timeout: 0
+reporter: "mocha-multi-reporters"
+reporterOptions: "configFile=multiReporterConfig.json"
+color: true
+full-trace: true
+inline-diffs: true
+uncaught: true

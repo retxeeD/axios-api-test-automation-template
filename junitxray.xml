@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="axios-api-automation-template" time="1.1890" tests="3" failures="0">
+  <testsuite name="Root Suite" timestamp="2022-09-21T03:11:36" tests="0" time="0.0000" failures="0">
+  </testsuite>
+  <testsuite name="Testes funcionais postivos da funcionalidade GET" timestamp="2022-09-21T03:11:36" tests="3" file="C:\Users\pedro\Desktop\templates\axios-api-automation-template\src\tests\get\ListUsers\Positive.test.js" time="1.1850" failures="0">
+    <testcase name="Testes funcionais postivos da funcionalidade GET CT_000 TEST" time="0.4250" classname="CT_000 TEST">
+    </testcase>
+    <testcase name="Testes funcionais postivos da funcionalidade GET CT_001 Validar Get com sucesso" time="0.3550" classname="CT_001 Validar Get com sucesso">
+    </testcase>
+    <testcase name="Testes funcionais postivos da funcionalidade GET CT_002 Validar Get com sucesso passando valor 1 no param" time="0.3520" classname="CT_002 Validar Get com sucesso passando valor 1 no param">
+    </testcase>
+  </testsuite>
+</testsuites>

@@ -2,7 +2,7 @@
   "name": "axios-api-automation-template",
   "type": "module",
   "version": "1.0.0",
-  "description": "",
+  "description": "api test automation",
   "main": "index.js",
   "scripts": {
     "test": "mocha -recursive ./src/tests",

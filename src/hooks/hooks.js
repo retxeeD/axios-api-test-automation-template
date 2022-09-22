@@ -4,6 +4,7 @@ function Logger(response, _this) {
         let jsonRequest = {
                 Type: "Request",
                 Method: response.config.method,
+                BaseUrl: response.config.baseURL,
                 Endpoint: response.config.url,
                 Headers: response.config.headers,
                 params: response.config.params,
@@ -11,8 +12,8 @@ function Logger(response, _this) {
         }
         let jsonResponse = {
                 Type: "Response",
-                Path: response.request.path,
-                StatusCode: response.status + " " + response.statusText,
+                StatusCode: `${response.status} ${response.statusText}`,
+                Path: `${response.request.path}`,
                 Headers: response.headers,
                 Body: JSON.stringify(response.data),
         }

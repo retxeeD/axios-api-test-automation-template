@@ -43,3 +43,22 @@ Utilizado para execução simultanea das duas libs de report
     src/service - realização de requests e retornos de resposta
     src/tests - criação e organização do testes
     src/DataUtils.js - arquivo de configuração de variaveis de ambiente
+#
+# Modo de uso
+
+Para iniciar sua automação utilizando este template siga os passos abaixo
+
+    Faça o dowload de todas as dependencias nescessárias através desse comando
+    > npm i --save-dev @faker-js/faker axios chai mocha mocha-junit-reporter mocha-multi-reporters mochawesome
+
+> 1º Defina variaveis de ambiente do sue projeto no arquivo src/DataUtils.js
+> 
+> 2º Crie os cenários de testes dentro da pasta src/tests
+> 
+> 3º Crie os modulos de requisição dentro da pasta serc/service
+> 
+> 4º Defina o modelo de requisição que sera enviado na pasta src/model
+> 
+> 5º Execute os tetes por linha de comando no console utilizando "npm mocha"
+
+    Para executar cenarios separadamente utiliza o comando "npm run byTag" alterando a tag deseja dentro do arquivo package.json

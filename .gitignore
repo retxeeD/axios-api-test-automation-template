@@ -4,4 +4,4 @@ mochawesome-report/
 *.tmp
 log/*
 *.html
-junitxray.xml
+*.xml

@@ -6,7 +6,7 @@
   "main": "index.js",
   "scripts": {
     "test": "mocha -recursive ./src/tests",
-    "justOne": "mocha --grep 'CT_001' ./src/tests/**"
+    "byTag": "mocha --grep '@CT_001' ./src/tests/**"
   },
   "keywords": [
     "api",

@@ -13,14 +13,14 @@ function Logger(response, _this) {
                 Endpoint: response.config.url,
                 Headers: response.config.headers,
                 params: response.config.params,
-                Body: JSON.stringify(response.config.data),
+                Body: data,
         }
         let jsonResponse = {
                 Type: "Response",
                 StatusCode: `${response.status} ${response.statusText}`,
                 Path: `${response.request.path}`,
                 Headers: response.headers,
-                Body: JSON.stringify(response.data),
+                Body: response.data,
         }
         console.log(jsonRequest);
         console.log(jsonResponse);

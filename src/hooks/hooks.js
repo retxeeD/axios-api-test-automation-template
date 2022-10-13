@@ -1,6 +1,11 @@
 import addContext from 'mochawesome/addContext.js';
 
 function Logger(response, _this) {
+        let data = response.config.data;
+        if (data) {
+                if (data.charAt(0) == "{" && data.slice(-1) == "}")
+                        data = JSON.parse(data);
+        }
         let jsonRequest = {
                 Type: "Request",
                 Method: response.config.method,

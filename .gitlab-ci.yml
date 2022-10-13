@@ -1,0 +1,58 @@
+#Default Node.js docker image
+image: node:14
+
+#Cache config
+cache: &global_cache
+  police: pull
+    key: ${CI_COMMIT_REF_SLUG}
+    paths:
+      - node_modules/
+
+#Pipeline stages
+stages:
+  - inspection
+  - build
+  - test
+
+lint_nodejs:
+  stage: inspection
+  script:
+    - npm install -g eslint
+    - npm install eslint-plugin-mocha@latest --save-dev
+    - eslint src
+  except:
+    variables:
+      - $DISACLE_INSPECTION == "true"
+
+build:
+  stage: build
+  cache:
+    <<: *global_cache
+    policy: push
+  script:
+    - npm install --unsafe-perm --production --no-optional
+  allow_failure: true
+  artifacts:
+    expire_in: 1 day
+    paths:
+      - ./node_modules
+    except:
+      variables:
+        -$DISABLE_BUILD == "true"
+
+unit_test:
+  stage: test
+  allow_failure: true
+  script:
+    - npm install --unsafe-perm
+    - npm test
+  artifacts:
+    espire_in: 1 day
+    when: always
+    reports:
+      junit: ./reports/*.xml
+    paths:
+      - ./report/
+    except:
+      variables:
+        - $DISABLE_TEST == "true"
